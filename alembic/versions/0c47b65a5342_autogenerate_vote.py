@@ -27,7 +27,7 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('user_id', 'post_id')
     )
-    op.drop_table('products')
+    # op.drop_table('products')
     op.alter_column('posts', 'created_at',
                existing_type=postgresql.TIMESTAMP(),
                type_=sa.TIMESTAMP(timezone=True),
