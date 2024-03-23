@@ -43,13 +43,13 @@ def downgrade() -> None:
                type_=postgresql.TIMESTAMP(),
                existing_nullable=False,
                existing_server_default=sa.text('now()'))
-    op.create_table('products',
-    sa.Column('name', sa.VARCHAR(), autoincrement=False, nullable=False),
-    sa.Column('price', sa.INTEGER(), autoincrement=False, nullable=False),
-    sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
-    sa.Column('is_sale', sa.BOOLEAN(), server_default=sa.text('false'), autoincrement=False, nullable=True),
-    sa.Column('inventory', sa.INTEGER(), server_default=sa.text('0'), autoincrement=False, nullable=True),
-    sa.Column('created_at', postgresql.TIMESTAMP(timezone=True), server_default=sa.text('now()'), autoincrement=False, nullable=True)
-    )
+    # op.create_table('products',
+    # sa.Column('name', sa.VARCHAR(), autoincrement=False, nullable=False),
+    # sa.Column('price', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('is_sale', sa.BOOLEAN(), server_default=sa.text('false'), autoincrement=False, nullable=True),
+    # sa.Column('inventory', sa.INTEGER(), server_default=sa.text('0'), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(timezone=True), server_default=sa.text('now()'), autoincrement=False, nullable=True)
+    # )
     op.drop_table('votes')
     # ### end Alembic commands ###
