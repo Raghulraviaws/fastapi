@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "kubernetes": "*.yaml",
+        "https://json.schemastore.org/yamllint.json": "file:///Users/raghul/fastapi/.github/workflows/build-deploy.yaml"
+    }
+}
