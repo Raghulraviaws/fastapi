@@ -2,6 +2,15 @@ name: Build and Deploy code
 on: [push, pull_request] 
 jobs:
   job1:
+    env:
+      DATABASE_HOSTNAME: localhost
+      DATABASE_PORT: 5432
+      DATABASE_PASSWORD: Scsa3;16
+      DATABASE_NAME: fastapi
+      DATABASE_USERNAME: postgres
+      SECRET_KEY: 3e24d94db61f63ed136907ea93fa9df7ee38a08a33d877250e6e45ed4ffb31c4
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
