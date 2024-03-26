@@ -31,5 +31,5 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "This message is from the api!!!"}
+    return {"message": "This api is pushed using github actions"}
 
